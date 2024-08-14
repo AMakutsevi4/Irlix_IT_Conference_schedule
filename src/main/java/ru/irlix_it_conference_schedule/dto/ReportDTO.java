@@ -9,7 +9,9 @@ import ru.irlix_it_conference_schedule.model.Speaker;
 import ru.irlix_it_conference_schedule.model.Viewer;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -21,5 +23,5 @@ public class ReportDTO {
     private Double duration;
     private Speaker speaker;
     private Auditorium auditorium;
-    private List<Viewer> viewers;
+    private Set<Viewer> viewers = new HashSet<>();
 }

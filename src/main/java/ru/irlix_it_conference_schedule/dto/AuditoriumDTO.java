@@ -6,7 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.irlix_it_conference_schedule.model.Report;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -15,6 +16,6 @@ import java.util.List;
 public class AuditoriumDTO {
 
     private String description;
-    private List<Report> reports;
+    private Set<Report> reports = new HashSet<>();
 
 }

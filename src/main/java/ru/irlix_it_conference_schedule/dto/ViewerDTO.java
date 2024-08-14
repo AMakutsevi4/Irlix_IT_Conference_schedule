@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.irlix_it_conference_schedule.model.Report;
 
-import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -16,5 +16,5 @@ public class ViewerDTO {
     private String first_name;
     private int phone_number;
     private String email;
-    private List<Report> reports;
+    private Set<Report> reports;
 }

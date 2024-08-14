@@ -5,7 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -25,14 +26,14 @@ public class Speaker {
 
     @ManyToMany
     @JoinTable(
-            name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
+            name = "speaker_roles",
+            joinColumns = @JoinColumn(name = "speaker_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private List<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
     /*Доклады, созданные пользователем*/
     @OneToMany(mappedBy = "speaker")
-    private List<Report> reports;
+    private Set<Report> reports = new HashSet<>();
 
 }

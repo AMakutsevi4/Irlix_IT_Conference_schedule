@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import ru.irlix_it_conference_schedule.model.Report;
 import ru.irlix_it_conference_schedule.model.Role;
 
-import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -19,7 +19,7 @@ public class SpeakerDTO {
     private int number_phone;
     private String email;
     private byte[] photo;
-    private List<Role> roles;
-    private List<Report> reports;
+    private Set<Role> roles;
+    private Set<Report> reports;
 
 }

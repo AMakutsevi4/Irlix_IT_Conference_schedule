@@ -6,7 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -37,5 +38,5 @@ public class Report {
             joinColumns = @JoinColumn(name = "report_id"),
             inverseJoinColumns = @JoinColumn(name = "viewer_id")
     )
-    private List<Viewer> viewers;
+    private Set<Viewer> viewers = new HashSet<>();
 }

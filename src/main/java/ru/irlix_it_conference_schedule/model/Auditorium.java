@@ -5,7 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -19,6 +20,6 @@ public class Auditorium {
     private String description;
     /*Доклады в аудитории*/
     @OneToMany(mappedBy = "auditorium")
-    private List<Report> reports;
+    private Set<Report> reports = new HashSet<>();
 
 }
